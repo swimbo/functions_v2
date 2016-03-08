@@ -61,18 +61,26 @@ negativeIndex(['jerry', 'sarah', 'sally'], -1)
 var mString = "the big giant mother fing string full of ms"
 var newArray = []
 function removeM(mString){
-  for(var i = 0; i <= mString.length; i++){
-    newArray.push(mString[i])
-    newArray.replace('m','')
+  var re = /m/g;
+  var newString = mString.replace(re,'');
+  console.log(newString)
   }
-  }
+// console.log(mString)
 removeM(mString)
-console.log(newString)
-// removeM('family') should return 'faily'
-// removeM('memory') should return 'eory'
 
+// removeM('family') should return 'faily'
+removeM('family')
+// removeM('memory') should return 'eory'
+removeM('memory')
 // Write a function called 'printObject' which takes a single object argument and console.log's each key-value pair in the format key is value on separate lines.
-var obj2 = {}
+var obj2 = {
+  color : blue,
+  size : 4,
+  length : 34
+}
+function printObject(obj2){
+  
+}
 
 // printObject({ a: 10, b: 20, c: 30 }) should print: md a is 10 b is 20 c is 30
 // printObject({ firstName: 'pork', lastName: 'chops' }) should print: md firstName is pork lastName is chops
