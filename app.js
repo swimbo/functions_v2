@@ -78,17 +78,31 @@ var obj2 = {
   size : 4,
   length : 34
 }
-function printObject(obj2){
-  for(i in obj2){
-    console.log(i,obj2[i])
+function printObject(obj){
+  for (var prop in obj) {
+    console.log(prop + " = " + obj[prop]);
   }
 }
 printObject(obj2)
 
 // printObject({ a: 10, b: 20, c: 30 }) should print: md a is 10 b is 20 c is 30
+printObject({ a: 10, b: 20, c: 30 })
+
 // printObject({ firstName: 'pork', lastName: 'chops' }) should print: md firstName is pork lastName is chops
+printObject({ firstName: 'pork', lastName: 'chops' })
+
 // Write a function called 'vowels' which takes a string and returns an array of all the vowels in the string, including duplicates.
+var longString = 'Holy cow how many vowels can we get in this string!'
+
+function vowels(string){
+  var vowelArray = []
+  string.join()
+  console.log(string)
+}
+vowels(longString)
+
 // vowels('alabama') should return ['a', 'a', 'a', 'a']
+
 // vowels('What evil odd ducks!') should return ['a', 'e', 'i', 'o', 'u']
 // Write a function called 'twins' which takes an array and returns true if every adjacent pair of items in the array is the same.
 // twins(['a', 'a', 'b', 'b', 'c', 'c']) should return true
