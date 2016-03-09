@@ -74,13 +74,16 @@ removeM('family')
 removeM('memory')
 // Write a function called 'printObject' which takes a single object argument and console.log's each key-value pair in the format key is value on separate lines.
 var obj2 = {
-  color : blue,
+  color : 'blue',
   size : 4,
   length : 34
 }
 function printObject(obj2){
-  
+  for(i in obj2){
+    console.log(i,obj2[i])
+  }
 }
+printObject(obj2)
 
 // printObject({ a: 10, b: 20, c: 30 }) should print: md a is 10 b is 20 c is 30
 // printObject({ firstName: 'pork', lastName: 'chops' }) should print: md firstName is pork lastName is chops
